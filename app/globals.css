@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+* {
+  font-family: ovo, sans-serif !important;
+}
+
+
+@theme {
+  --font-Outfit: var(--font-outfit);
+  --font-Ovo: var(--font-ovo);
+  --color-lightHover:#fcf4ff;
+  --color-darkHover: #eabfff;
+  --color-darkTheme: #1a1a1a;
+  
+}
+
+
+@utility grid-cols-auto {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+@utility shadow-boxShadowLight {
+  box-shadow: 4px 4px 0 #000;
+}
+@utility shadow-boxShadowDark {
+  box-shadow: 4px 4px 0 #fff;
+}
