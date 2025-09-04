@@ -24,7 +24,7 @@ const Me = ({ theme }) => {
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.7 }}
-        className="text-center text-5xl font-Ovo"
+        className="text-center text-5xl mb-0 font-Ovo"
       >
         It's all about me
       </motion.h2>
@@ -44,7 +44,7 @@ const Me = ({ theme }) => {
           <Image
             src={assets.user_image}
             alt="me"
-            className="w-full  rounded-3xl mx-auto mt-10 mb-5"
+            className="w-full  rounded-3xl mx-auto mt-5 mb-5"
           />
         </motion.div>
         <div className="flex-1">
@@ -52,14 +52,12 @@ const Me = ({ theme }) => {
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="mb-10 max-w-2xl font-Ovo"
+            className="mb-10 max-w-2xl font-Ovo text-center"
           >
             I am a Full Stack Developer with 2 years of experience building
             scalable web applications. Skilled in React, Tailwind CSS, Node.js,
             and databases, I create seamless user experiences and efficient
-            backends. Passionate about problem-solving, clean code, and
-            continuous learning, I deliver impactful, production-ready digital
-            solutions.
+            backends.
           </motion.p>
 
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
