@@ -8,9 +8,11 @@
 @theme {
   --font-Outfit: var(--font-outfit);
   --font-Ovo: var(--font-ovo);
-  --color-lightHover:#fcf4ff;
-  --color-darkHover: #eabfff;
-  --color-darkTheme: #1a1a1a;
+  --color-lightHover: #f5f7fa;   /* soft cool gray for light mode hover */
+  --color-darkHover:  #3a3f58;   /* muted indigo-gray for dark mode hover */
+  --color-darkTheme:  #0d1117;   /* GitHub-style modern dark background */
+  --color-accent:     #3b82f6;   /* modern tech blue */
+  --color-accentAlt:  #06b6d4;   /* optional teal accent for variation */
   
 }
 

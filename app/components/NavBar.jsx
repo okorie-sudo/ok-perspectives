@@ -116,7 +116,7 @@ const NavBar = ({ theme, toggleTheme }) => {
         {/* Small display navigation here */}
         <ul
           ref={menuRef}
-          className="flex md:hidden  flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 dark:bg-darkHover dark:text-white transition duration-500"
+          className="flex md:hidden  flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-lightHover dark:bg-darkHover dark:text-white transition duration-500"
         >
           <div className="absolute bottom-[40%] right-6 hover:rotate-180 transition duration-1000 ease-linear cursor-pointer ">
             <Image
@@ -126,27 +126,42 @@ const NavBar = ({ theme, toggleTheme }) => {
               className="w-5"
             />
           </div>
-          <li onClick={closeMenu}>
+          <li
+            onClick={closeMenu}
+            className="hover:translate-x-[10px] duration-400 ease-in hover:border-b  border-white"
+          >
             <a className="font-Ovo" href="#top">
               Home
             </a>
           </li>
-          <li onClick={closeMenu}>
+          <li
+            onClick={closeMenu}
+            className="hover:translate-x-[10px] duration-400 ease-in hover:border-b  border-white"
+          >
             <a className="font-Ovo" href="#me">
               Me
             </a>
           </li>
-          <li onClick={closeMenu}>
+          <li
+            onClick={closeMenu}
+            className="hover:translate-x-[10px] duration-400 ease-in hover:border-b  border-white"
+          >
             <a className="font-Ovo" href="#services">
               Services
             </a>
           </li>
-          <li onClick={closeMenu}>
+          <li
+            onClick={closeMenu}
+            className="hover:translate-x-[10px] duration-400 ease-in hover:border-b  border-white"
+          >
             <a className="font-Ovo" href="#work">
               Jobs
             </a>
           </li>
-          <li onClick={closeMenu}>
+          <li
+            onClick={closeMenu}
+            className="hover:translate-x-[10px] duration-400 ease-in hover:border-b  border-white"
+          >
             <a className="font-Ovo" href="#contact">
               Reach Out
             </a>
