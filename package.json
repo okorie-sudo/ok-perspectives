@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "next build",
+     "postbuild": "node -e \"require('fs').mkdirSync('out',{recursive:true});require('fs').writeFileSync('out/.nojekyll','')\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out -b gh-pages",
     "start": "next start",
     "lint": "eslint"
   },
@@ -20,6 +23,7 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4"
   }
 }
