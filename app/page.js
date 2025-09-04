@@ -8,10 +8,11 @@ import Jobs from "./components/Jobs";
 import Me from "./components/Me";
 import NavBar from "./components/NavBar";
 import Services from "./components/Services";
+import { FaS } from "react-icons/fa6";
 
 
 export default function Home() {
-  const [darkMode, setDarkMode] = React.useState(true);
+  const [darkMode, setDarkMode] = React.useState(false);
 useEffect(() => {
   if(localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches  )) {
     setDarkMode(true)
