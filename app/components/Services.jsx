@@ -1,28 +1,62 @@
 import { assets, serviceData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
+import { motion } from "motion/react";
 
-const Services = () => {
+const Services = ({ theme }) => {
   return (
-    <div id="services" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-Ovo">Let's work together</h4>
-      <h2 className="text-center text-5xl font-Ovo">Pick a Choose</h2>
-      <p className="text-center max-w-2xl mt-5 mx-auto font-Ovo mb-12">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="services"
+      className="w-full px-[12%] py-10 scroll-mt-20"
+    >
+      <motion.h4
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-center mb-2 text-lg font-Ovo"
+      >
+        Let's work together
+      </motion.h4>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="text-center text-5xl font-Ovo"
+      >
+        Pick a Choose
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.5 }}
+        className="text-center max-w-2xl mt-5 mx-auto font-Ovo mb-12"
+      >
         I deliver high-quality, full-stack web solutions with a strong focus on
         speed, reliability, and precision—helping you launch impactful products
         faster without compromising excellence.
-      </p>
+      </motion.p>
 
-      <div className="grid grid-cols-auto gap-6 my-10">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="grid grid-cols-auto gap-6 my-10"
+      >
         {serviceData &&
           serviceData.map((service, index) => (
-            <div
+            <motion.div
+              whileHover={{ scale: 1.05 }}
               key={index}
-              className="border border-gray-400 rounded-sm px-8 py-5 hover:shadow-boxShadowDark cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-400 transition"
+              className="border border-gray-400 rounded-sm px-8 py-5 hover:shadow-[2px_2px_0_#000]  cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-400 transition dark:hover:bg-darkHover dark:hover:shadow-[2px_2px_0_#fff]"
             >
               <Image src={service.icon} alt="" className="w-10" />
-              <h3 className="text-lg my-4 text-gray-700">{service.title}</h3>
-              <p className="text-sm text-gray-600 leading-5">
+              <h3 className="text-lg my-4 text-gray-700 dark:text-white">
+                {service.title}
+              </h3>
+              <p className="text-sm text-gray-600 leading-5 dark:text-white/80">
                 {service.description}
               </p>
               <a
@@ -32,10 +66,10 @@ const Services = () => {
                 Read More{" "}
                 <Image src={assets.right_arrow} alt="" className="w-4" />
               </a>
-            </div>
+            </motion.div>
           ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
